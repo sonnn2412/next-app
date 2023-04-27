@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+cd .husky
+chmod +x pre-commit
+yarn tsc --noEmit && yarn eslint . && yarn prettier --write .
